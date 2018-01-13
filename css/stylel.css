@@ -1,0 +1,244 @@
+html,body,div,ul,li,ol,p,h1,h3 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+}
+ .cover {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg) no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+  z-index: -1;
+}
+.cover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+/* 歌曲播放信息 */
+.main {
+  height: 76vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1100px){
+  .main {
+    height: 76vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.aside .pic {
+  background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle) no-repeat;
+  background-size: cover;
+  width: 46vh;
+  height: 46vh;
+}
+@media (max-width: 1280px){
+  .aside .pic {
+    background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle) no-repeat;
+    background-size: cover;
+    width: 36vh;
+    height: 36vh;
+  }
+}
+.aside .control {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+.aside .control span {
+  flex:1;
+  text-align: center; 
+  font-size: 5vh;
+  color: rgba(255,255,255,0.4);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.aside .control span:hover {
+  color: rgba(255,255,255,1)
+}
+.detail {
+  margin-left: 10vh;
+  height: 56vh
+}
+@media (max-width: 1280px){
+  .detail {
+    margin-left: 5vh;
+    height: 46vh
+  }
+}
+@media (max-width: 1100px){
+  .detail {
+    margin-left: 5vh;
+    height: 16vh;
+    text-align: center;
+  }
+}
+.detail .tag {
+  background: #2e6eec;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 2vh;
+}
+.detail h1 {
+  color: #fff;
+  font-size: 6vh;
+  margin-top: 2vh;
+  font-weight: 500;
+}
+.detail .icons {
+  display: flex;
+  margin-top: 12vh;
+}
+.detail .icons span {
+  margin-right: 3vw;
+  font-size: 3vh;
+  color: #fff;
+  width: 20vh;
+}
+
+.detail .bar-progress {
+  position: relative;
+  margin-top: 15vh;
+  width: 50vw;
+  height: 1vh;
+  background: rgba(255,255,255,0.4);
+  border-radius: .5vh;
+}
+
+.detail .bar-progress span {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(130%, -50%);
+  color: #fff;
+  font-size: 2vh;
+}
+.detail .bar-progress .progress {
+  height: 100%;
+  width: 50%;
+  background: rgba(255,255,255,1);
+  border-radius: .5vh;
+}
+.detail .author {
+  display: block;
+  margin-top: 3vh;
+  color: rgba(255,255,255,0.4);
+}
+@media (max-width: 1100px){
+  .detail .tag {
+    display: none;
+  }
+  .detail h1 {
+    color: #fff;
+    font-size: 6vh;
+    margin-top: 1vh;
+    font-weight: 500;
+  }
+  .detail .icons {
+    display: none;
+  }
+  .detail .icons span {
+    display: none;
+  }
+  .detail .author {
+    display: none;
+  }
+  .detail .bar-progress {
+    position: relative;
+    margin-top: 5vh;
+    width: 50vw;
+    height: 1vh;
+    background: rgba(255,255,255,0.4);
+    border-radius: .5vh;
+  }
+}
+/* 歌单选择 */
+.footer {
+  background: rgba(255, 255, 255, 0.2);
+  height: 24vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.footer .list-box {
+  position: relative;
+  height: 100%;
+  width: 70vw;
+  overflow: hidden;
+}
+.footer ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.footer ul li {
+  margin-left: 1.5vh;
+  margin-right: 2.5vh;
+  text-align: center;
+  cursor: pointer;
+}
+.footer ul li:hover {
+  box-shadow: 0 0 1vh 1vh rgba(255,255,255,1)
+}
+.footer ul li h3 {
+  font-size: 2vh;
+  margin-top: 1vh;
+  color: rgba(255,255,255,0.6);
+}
+.footer .songlistPic {
+  height: 16vh;
+  width: 20vh;
+  background: url(http://cloud.hunger-valley.com/17-10-24/1906806.jpg-small) no-repeat;
+  background-size: cover;
+}
+.footer .listmenu {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+.footer .listmenu span{
+  font-size: 6vh;
+  color: rgba(255,255,255,0);
+  transition: all 0.5s;
+}
+.footer .menu-left {
+  left: 10vw;
+  transform: translate(0, -50%);
+}
+.footer .menu-right {
+  right: 10vw;
+  transform: translate(0, -50%);
+}
+.footer:hover span{
+  color: rgba(255,255,255,0.4);
+}
