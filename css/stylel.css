@@ -19,7 +19,7 @@ body,
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg) no-repeat;
+  background: url() no-repeat;
   background-size: cover;
   filter: blur(4px);
   z-index: -1;
@@ -44,16 +44,12 @@ body,
 }
 @media (max-width: 1000px){
   .main {
-    /* height: 76vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
     flex-direction: column;
     align-content: center;
   }
 }
 .aside .pic {
-  background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle) no-repeat;
+  background: url() no-repeat;
   background-size: cover;
   width: 46vh;
   height: 46vh;
@@ -61,12 +57,11 @@ body,
 }
 @media (max-width: 1280px){
   .aside .pic {
-    background: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle) no-repeat;
-    background-size: cover;
     width: 36vh;
     height: 36vh;
   }
 }
+
 .aside .control {
   display: flex;
   justify-content: center;
@@ -79,6 +74,9 @@ body,
   color: rgba(255,255,255,0.4);
   transition: all 0.5s;
   cursor: pointer;
+}
+.aside .control .collected {
+  color: red;
 }
 .aside .control span:hover {
   color: rgba(255,255,255,1)
@@ -95,6 +93,7 @@ body,
     width: 50vw;
   }
 }
+
 @media (max-width: 1000px){
   .detail {
     margin-left: 0;
@@ -102,6 +101,7 @@ body,
     text-align: center;
   }
 }
+
 .detail .tag {
   background: #2e6eec;
   padding: 5px 10px;
@@ -131,9 +131,9 @@ body,
   width: 50vw;
   height: 1vh;
   background: rgba(255,255,255,0.4);
-  border-radius: .5vh;
+  border-radius: 2px;
+  
 }
-
 .detail .bar-progress span {
   display: block;
   position: absolute;
@@ -145,14 +145,20 @@ body,
 }
 .detail .bar-progress .progress {
   height: 100%;
-  width: 50%;
+  width: 0;
   background: rgba(255,255,255,1);
-  border-radius: .5vh;
+  border-radius: 2px;
 }
 .detail .author {
   display: block;
   margin-top: 3vh;
   color: rgba(255,255,255,0.4);
+}
+.detail .lyric {
+  display: block;
+  margin-top: 1vh;
+  font-size: 3vh; 
+  color: rgba(255,255,255,1);
 }
 @media (max-width: 1280px){
 
@@ -168,26 +174,6 @@ body,
 
   }
   
-  .detail .bar-progress span {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(130%, -50%);
-    color: #fff;
-    font-size: 2vh;
-  }
-  .detail .bar-progress .progress {
-    height: 100%;
-    width: 50%;
-    background: rgba(255,255,255,1);
-    border-radius: .5vh;
-  }
-  .detail .author {
-    display: block;
-    margin-top: 3vh;
-    color: rgba(255,255,255,0.4);
-  }
 }
 @media (max-width: 1000px){
   .detail .tag {
@@ -239,6 +225,7 @@ body,
   list-style: none;
   display: flex;
   align-items: center;
+
 }
 .footer ul li {
   margin-left: 1.5vh;
@@ -247,7 +234,10 @@ body,
   cursor: pointer;
 }
 .footer ul li:hover {
-  box-shadow: 0 0 1vh 1vh rgba(255,255,255,1)
+  box-shadow: 0 0 5px 5px rgba(255,255,255,0.7);
+}
+.footer ul li.active {
+  box-shadow: 0 0 5px 5px rgba(255,255,255,0.7);
 }
 .footer ul li h3 {
   font-size: 2vh;
@@ -257,7 +247,7 @@ body,
 .footer .songlistPic {
   height: 16vh;
   width: 20vh;
-  background: url(http://cloud.hunger-valley.com/17-10-24/1906806.jpg-small) no-repeat;
+  background: url() no-repeat;
   background-size: cover;
 }
 .footer .listmenu {
@@ -270,6 +260,9 @@ body,
   color: rgba(255,255,255,0);
   transition: all 0.5s;
 }
+.footer .listmenu span:hover{
+  color: rgba(255,255,255,1);
+}
 .footer .menu-left {
   left: 10vw;
   transform: translate(0, -50%);
@@ -280,4 +273,8 @@ body,
 }
 .footer:hover span{
   color: rgba(255,255,255,0.4);
+}
+.boomText {
+  display: inline-block;
+  opacity: 0;
 }
