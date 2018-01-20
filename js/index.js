@@ -70,7 +70,6 @@ var playlistModule = {
     })
   },
   render: function (data){
-    console.log(data)
     var temp = '';
     data.forEach(function(item){
       temp += '<li data-channel-id='+ item.channel_id +' data-channel-name='+ item.name +'>'
@@ -98,7 +97,6 @@ var Fm = {
     EventCenter.on('select-albumn', function(e){
       _this.channelId = e.detail.channelId
       _this.channelName = e.detail.channelName
-      
       _this.getSong()
     })
   },
@@ -107,6 +105,7 @@ var Fm = {
     $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php', {channel: _this.channelId}).done(function(ret){
       $('.detail .tag').text(_this.channelName)
       _this.song = ret['song'][0]
+      console.log(_this.song)
       _this.loadSongInfo()
       _this.loadLyric()
     })
