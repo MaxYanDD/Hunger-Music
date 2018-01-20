@@ -76,7 +76,10 @@ body,
   cursor: pointer;
 }
 .aside .control .collected {
-  color: red;
+  color: rgba(255, 0, 0, 0.4);
+}
+.aside .control .collected:hover{
+  color: rgba(255, 0, 0, 1);
 }
 .aside .control span:hover {
   color: rgba(255,255,255,1)
