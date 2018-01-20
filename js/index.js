@@ -67,7 +67,7 @@ var playlistModule = {
   getdata: function (callback) {
     $.getJSON('https://jirenguapi.applinzi.com/fm/getChannels.php').done(function(ret){
       callback(ret.channels)
-    })
+    }).fail(this.getdata)
   },
   render: function (data){
     var temp = '';
