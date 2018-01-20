@@ -104,7 +104,7 @@ var Fm = {
   },
   getSong: function(){
     var _this = this
-    $.getJSON('http://api.jirengu.com/fm/getSong.php', {channel: _this.channelId}).done(function(ret){
+    $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php', {channel: _this.channelId}).done(function(ret){
       $('.detail .tag').text(_this.channelName)
       _this.song = ret['song'][0]
       _this.loadSongInfo()
@@ -122,7 +122,7 @@ var Fm = {
   },
   loadLyric: function(){
     var _this = this
-    $.getJSON('http://api.jirengu.com/fm/getLyric.php',{sid: _this.song.sid}).done(function(ret){
+    $.getJSON('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid: _this.song.sid}).done(function(ret){
       var lyricObj = {};
       ret.lyric.split('\n').forEach(function(line){
         var times = line.match(/\d{2}:\d{2}/g)
