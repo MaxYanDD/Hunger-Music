@@ -115,7 +115,7 @@ var Fm = {
     this.audio.src = this.song.url;
     $('#play').removeClass('icon-play').addClass('icon-pause')
     $('.detail h1').text(_this.song.title)
-    $('.detail .author').text(_this.song.artist)
+    $('.detail .author'). text(_this.song.artist)
     $('.aside .pic').css('background-image', 'url('+ _this.song.picture +')')
     $('.cover').css('background-image', 'url('+ _this.song.picture +')')
   },
@@ -194,7 +194,7 @@ $.fn.boomText = function(type){
     })
     return arr.join('')
   })
-  console.log(this.html())
+  
   var index = 0
   var $boomTexts = $(this).find('span')
   var clock = setInterval(function(){
