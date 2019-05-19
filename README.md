@@ -1,4 +1,4 @@
-### [记得FM](https://maxyandd.github.io/Hunger-Music/index.html)
+### [音乐盒](https://maxyandd.github.io/Hunger-Music/index.html)
 
 #### 功能介绍
 音乐FM，提供了歌单选择、歌词显示功能，简单易用，能适配浏览器尺寸变化。
